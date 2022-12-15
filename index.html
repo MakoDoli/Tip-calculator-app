@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobquery.css" />
+    <link rel="stylesheet" href="tabquery.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <img class="logo" src="./images/logo.svg" />
+    <div class="container">
+      <div class="box left-box">
+        <h1>Bill</h1>
+
+        <input
+          type="text"
+          name="bill"
+          class="user-input"
+          id="bill"
+          placeholder="0"
+        />
+        <p class="wrong-1">Can't be zero</p>
+        <h1>Select Tip %</h1>
+        <div class="tips">
+          <div class="cell cell-1" onclick="changeColor(this)">5%</div>
+          <div class="cell cell-2" onclick="changeColor(this)">10%</div>
+          <div class="cell cell-3" onclick="changeColor(this)">15%</div>
+          <div class="cell cell-4" onclick="changeColor(this)">25%</div>
+          <div class="cell cell-5" onclick="changeColor(this)">50%</div>
+          <div class=" cell-6" onclick="customise()"><input type="text" name="custom" id="custom" placeholder='Custom'></div>
+        </div>
+        <h1>Number of People</h1>
+        <input
+          type="text"
+          name="tip"
+          class="user-input"
+          id="people"
+          placeholder="0"
+        />
+        <p class="wrong-2">Can't be zero</p>
+      </div>
+      <div class="box right-box">
+        <div class="tip-box">
+          <div class="text">
+          <h2>Tip amount</h2>
+          <p>/ person</p>
+          </div>
+          <div class="tip-amount" >
+          $0.00
+          </div>
+        </div>
+        <div class="tip-box">
+          <div class="text">
+          <h2>Total</h2>
+          <p>/ person</p>
+          </div>
+          <div class="total-amount" >
+          $0.00
+          </div>
+        </div>
+        <div class="reset" onclick="reset()">Reset</div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
